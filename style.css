@@ -1,0 +1,45 @@
+:root {
+  --paper: #F5F1E8; --cell: #FAF7F0; --ink: #1B1A17; --body: #4B4740; --muted: #6E6A60;
+  --faint: #D8D2C4; --burgundy: #7A1F2B;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); color-scheme: light; }
+body {
+  margin: 0; background: var(--paper); color: var(--body);
+  font-family: "Libre Franklin", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px; line-height: 1.6;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+header { text-align: center; margin-bottom: 2.5rem; }
+.eyebrow {
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+h1, h2 {
+  font-family: "DM Serif Display", Georgia, serif; font-weight: 400; color: var(--ink);
+  line-height: 1.15; margin: 0;
+}
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.5rem; margin: 2.25rem 0 0.6rem; }
+.rule {
+  display: flex; align-items: center; gap: 0.75rem; margin: 1rem 0 0;
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy);
+}
+.rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: var(--ink); }
+p { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.4rem; }
+a { color: var(--burgundy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+strong { color: var(--ink); font-weight: 600; }
+table { border-collapse: collapse; width: 100%; margin: 0 0 1.25rem; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--faint); }
+th { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--ink); color: var(--muted); font-size: 0.9rem; }
+.quiet { color: var(--muted); font-style: italic; }
+@media (max-width: 480px) {
+  h1 { font-size: 2.1rem; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  td { padding: 0.35rem 0; border: 0; }
+  tr { border-bottom: 1px solid var(--faint); padding: 0.6rem 0; }
+}
